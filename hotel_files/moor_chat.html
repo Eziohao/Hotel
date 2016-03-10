@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!-- saved from url=(0339)http://webchat.7moor.com/view/moor_chat.html?v=20160304&clientId=-1753055386&fromUrl=http%3A%2F%2Fwww.tujia.com%2F&serviceStates=1&accessId=797098a0-b29d-11e5-b3b1-49764155fe50&styleColor=f49300&peers=%5B%7B%22name%22%3A%22%E5%9C%A8%E7%BA%BF%E5%92%A8%E8%AF%A2%22%2C%22id%22%3A%2210002960%22%2C%22status%22%3A%22enable%22%7D%5D&otherParams= -->
+<html xmlns="http://www.w3.org/1999/html"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>im</title>
+    <link rel="stylesheet" type="text/css" href="moor_style.css">
+    <script type="text/javascript" src="json2.js"></script><style type="text/css"></style>
+    <!--<script type="text/javascript" src="http://webchat.7moor.com/javascripts/jquery-1.7.2.min.js"></script>-->
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+<style>.judegCloseBtn,.customer,.submit_evaluate{background-color: #f49300;}.outer-right:before, .outer-right p{border-color:transparent transparent transparent #f49300 ;}#show-more,.sendmsg,.close_box dd a:link,.close_box dd a:hover,.close_box dd a:active,.close_box dd a:visited,.esc_talk dd a:link,.esc_talk dd a:hover,.esc_talk dd a:active,.esc_talk dd a:visited{color:#f49300}.judegClose,.isClose,#mtypelist li:hover{border-color:#f49300} .manual,.question_groups li.active{color:#f49300} .leave_btn,.reasons li.active{background-color:#f49300} .input_icon{background-color:#f49300}</style></head>
+<body>
+<div class="chatcontainer" style="display: block;">
+    <div class="header grey12" style="background-color: rgb(244, 147, 0);">
+        <div class="ser-info">
+            <div class="logo"><img id="logo" src=""></div>
+            <div class="ser-company" id="ser-company"></div>
+            <div class="connect-info" id="connect-info"></div>
+        </div>
+        <div class="corner-btn">
+            <span class="chat-close" id="chat-close"></span>
+            <span class="chat-min" id="chat-min"></span>
+            <span class="chat-voice" id="chat-voice"></span>
+        </div>
+    </div>
+    <div class="content" id="wrap">
+        <ul class="conversation">
+        </ul>
+        <div id="launch_evaluation">
+            <form action="" class="esc_form_easy">
+            </form>
+        </div>
+        <input type="button" style="display: none" id="appraise_easy" way="out"><!--评价事件的触发按钮-->
+    </div>
+    <div class="footer">
+        <div class="sys-msg" style="display: none;"></div>
+        <div class="face-con" id="face-con">
+            <ul><li title="smile"><span onclick="window.getEmojiCode(&#39;smile&#39;)" title="smile" class="emoji-face" style="background-position: 0px 0px;"></span></li><li title="smiley"><span onclick="window.getEmojiCode(&#39;smiley&#39;)" title="smiley" class="emoji-face" style="background-position: -25px 0px;"></span></li><li title="laughing"><span onclick="window.getEmojiCode(&#39;laughing&#39;)" title="laughing" class="emoji-face" style="background-position: -50px 0px;"></span></li><li title="blush"><span onclick="window.getEmojiCode(&#39;blush&#39;)" title="blush" class="emoji-face" style="background-position: -75px 0px;"></span></li><li title="heart_eyes"><span onclick="window.getEmojiCode(&#39;heart_eyes&#39;)" title="heart_eyes" class="emoji-face" style="background-position: 0px -25px;"></span></li><li title="smirk"><span onclick="window.getEmojiCode(&#39;smirk&#39;)" title="smirk" class="emoji-face" style="background-position: -25px -25px;"></span></li><li title="flushed"><span onclick="window.getEmojiCode(&#39;flushed&#39;)" title="flushed" class="emoji-face" style="background-position: -50px -25px;"></span></li><li title="kissing_heart"><span onclick="window.getEmojiCode(&#39;kissing_heart&#39;)" title="kissing_heart" class="emoji-face" style="background-position: -75px -25px;"></span></li><li title="grin"><span onclick="window.getEmojiCode(&#39;grin&#39;)" title="grin" class="emoji-face" style="background-position: 0px -50px;"></span></li><li title="wink"><span onclick="window.getEmojiCode(&#39;wink&#39;)" title="wink" class="emoji-face" style="background-position: -25px -50px;"></span></li><li title="stuck_out_tongue_winking_eye"><span onclick="window.getEmojiCode(&#39;stuck_out_tongue_winking_eye&#39;)" title="stuck_out_tongue_winking_eye" class="emoji-face" style="background-position: -50px -50px;"></span></li><li title="stuck_out_tongue_closed eyes"><span onclick="window.getEmojiCode(&#39;stuck_out_tongue_closed eyes&#39;)" title="stuck_out_tongue_closed eyes" class="emoji-face" style="background-position: -75px -50px;"></span></li><li title="sleeping"><span onclick="window.getEmojiCode(&#39;sleeping&#39;)" title="sleeping" class="emoji-face" style="background-position: 0px -75px;"></span></li><li title="worried"><span onclick="window.getEmojiCode(&#39;worried&#39;)" title="worried" class="emoji-face" style="background-position: -25px -75px;"></span></li><li title="expressionless"><span onclick="window.getEmojiCode(&#39;expressionless&#39;)" title="expressionless" class="emoji-face" style="background-position: -50px -75px;"></span></li><li title="sweat_smile"><span onclick="window.getEmojiCode(&#39;sweat_smile&#39;)" title="sweat_smile" class="emoji-face" style="background-position: -75px -75px;"></span></li><li title="joy"><span onclick="window.getEmojiCode(&#39;joy&#39;)" title="joy" class="emoji-face" style="background-position: 0px -100px;"></span></li><li title="cold_sweat"><span onclick="window.getEmojiCode(&#39;cold_sweat&#39;)" title="cold_sweat" class="emoji-face" style="background-position: -25px -100px;"></span></li><li title="sob"><span onclick="window.getEmojiCode(&#39;sob&#39;)" title="sob" class="emoji-face" style="background-position: -50px -100px;"></span></li><li title="angry"><span onclick="window.getEmojiCode(&#39;angry&#39;)" title="angry" class="emoji-face" style="background-position: -75px -100px;"></span></li><li title="mask"><span onclick="window.getEmojiCode(&#39;mask&#39;)" title="mask" class="emoji-face" style="background-position: 0px -125px;"></span></li><li title="scream"><span onclick="window.getEmojiCode(&#39;scream&#39;)" title="scream" class="emoji-face" style="background-position: -25px -125px;"></span></li><li title="sunglasses"><span onclick="window.getEmojiCode(&#39;sunglasses&#39;)" title="sunglasses" class="emoji-face" style="background-position: -50px -125px;"></span></li><li title="heart"><span onclick="window.getEmojiCode(&#39;heart&#39;)" title="heart" class="emoji-face" style="background-position: -75px -125px;"></span></li><li title="broken_heart"><span onclick="window.getEmojiCode(&#39;broken_heart&#39;)" title="broken_heart" class="emoji-face" style="background-position: 0px -150px;"></span></li><li title="star"><span onclick="window.getEmojiCode(&#39;star&#39;)" title="star" class="emoji-face" style="background-position: -25px -150px;"></span></li><li title="anger"><span onclick="window.getEmojiCode(&#39;anger&#39;)" title="anger" class="emoji-face" style="background-position: -50px -150px;"></span></li><li title="exclamation"><span onclick="window.getEmojiCode(&#39;exclamation&#39;)" title="exclamation" class="emoji-face" style="background-position: -75px -150px;"></span></li><li title="question"><span onclick="window.getEmojiCode(&#39;question&#39;)" title="question" class="emoji-face" style="background-position: 0px -175px;"></span></li><li title="zzz"><span onclick="window.getEmojiCode(&#39;zzz&#39;)" title="zzz" class="emoji-face" style="background-position: -25px -175px;"></span></li><li title="thumbsup"><span onclick="window.getEmojiCode(&#39;thumbsup&#39;)" title="thumbsup" class="emoji-face" style="background-position: -50px -175px;"></span></li><li title="thumbsdown"><span onclick="window.getEmojiCode(&#39;thumbsdown&#39;)" title="thumbsdown" class="emoji-face" style="background-position: -75px -175px;"></span></li><li title="ok_hand"><span onclick="window.getEmojiCode(&#39;ok_hand&#39;)" title="ok_hand" class="emoji-face" style="background-position: 0px -200px;"></span></li><li title="punch"><span onclick="window.getEmojiCode(&#39;punch&#39;)" title="punch" class="emoji-face" style="background-position: -25px -200px;"></span></li><li title="yeah"><span onclick="window.getEmojiCode(&#39;yeah&#39;)" title="yeah" class="emoji-face" style="background-position: -50px -200px;"></span></li><li title="clap"><span onclick="window.getEmojiCode(&#39;clap&#39;)" title="clap" class="emoji-face" style="background-position: -75px -200px;"></span></li><li title="muscle"><span onclick="window.getEmojiCode(&#39;muscle&#39;)" title="muscle" class="emoji-face" style="background-position: 0px -225px;"></span></li><li title="pray"><span onclick="window.getEmojiCode(&#39;pray&#39;)" title="pray" class="emoji-face" style="background-position: -25px -225px;"></span></li><li title="skull"><span onclick="window.getEmojiCode(&#39;skull&#39;)" title="skull" class="emoji-face" style="background-position: -50px -225px;"></span></li><li title="trollface"><span onclick="window.getEmojiCode(&#39;trollface&#39;)" title="trollface" class="emoji-face" style="background-position: -75px -225px;"></span></li></ul>
+        </div>
+        <div class="msg-toolbar">
+            <div id="face-btn"><img src="face-icon.png" width="20px" height="20px"></div>
+            <div id="image-btn">
+                <img src="image-icon.png" width="22px" height="20px">
+                <input style="display: none;" accept="image/jpeg,image/jpg,image/gif,image/png,image/bmp" type="file" id="picture" name="picture">
+            </div>
+            <div id="question-btn"><img src="question-icon.png" width="20px" height="20px"></div>
+        </div>
+        <div class="msg-input">
+            <div class="input-box">
+                <textarea id="chatbox_input" class="text grey" onfocus="if(value==&#39;说点什么吧...&#39;){value=&#39;&#39;}">说点什么吧...</textarea>
+            </div>
+        </div>
+        <div class="msg-toolbar-footer grey12">
+            <span><input type="button" value="发送" id="chatmsg_submit" disabled="disabled" style="background-color: rgb(244, 147, 0);"></span>
+            <span class="text grey quite">快捷键:Enter</span>
+        </div>
+    </div>
+    <div id="imcsr" class="isClose" style="display: none;border-top: none">
+        <div class="close_box">
+            <dl>
+                <dd>
+                    <a href="javascript:void(0);" class="chatCloseBtn">立即结束</a>
+                    <a href="javascript:void(0);" class="chatCancelBtn">取消</a>
+                </dd>
+                <dt>即将结束本次对话</dt>
+            </dl>
+            <h3>感谢您使用我们的服务,请为此次服务进行评价</h3>
+            <form id="esc_form" class="esc_form">
+                <ol class="evaluates">
+                    <li></li>
+                </ol>
+                <div class="esc_form_reson"></div>
+                <textarea class="proposal" onfocus="if(value==&#39;欢迎为我们的服务提建议&#39;){value=&#39;&#39;;style.color=&#39;#000&#39;}" rows="4" onblur="if (value ==&#39;&#39;){value=&#39;欢迎为我们的服务提建议&#39;;style.color=&#39;#a7a7a7&#39;}">欢迎为我们的服务提建议</textarea>
+                <input id="appraise" class="submit_evaluate" type="button" value="提交评价" way="in">
+
+            </form>
+        </div>
+        <!-- <p>结束本次对话？</p>
+
+        <div style="width:90%; margin:0 5%">
+            <a href="javascript:void(0);" class="chatCloseBtn">立即结束</a>
+            <a href="javascript:void(0);" class="chatCancelBtn">取消</a>
+        </div> -->
+    </div>
+    <div class="judegClose" style="display: none">
+        <p>结束本次对话？</p>
+        <div class="esc_talk" style="width:90%; margin:0 5%">
+            <a href="javascript:void(0);" class="judegCloseBtn">立即结束</a>
+            <a href="javascript:void(0);" class="judegCancelBtn">取消</a>
+        </div>
+    </div>
+    <div class="chattype" style="display: none;">
+        <p>请选择咨询类型</p>
+        <ul id="mtypelist" class="clearfix">
+
+        </ul>
+    </div>
+
+    <div id="allQuestion">
+        <div class="allQuestion_top">
+            <span class="title_one">编组</span>
+            <span class="title_two">常见问题</span>
+        </div>
+        <div class="allQuestion_bot">
+            <div class="question_groups">
+                <ul>
+                </ul>
+            </div>
+            <div class="question_common">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <audio src="../stylesheets/warning.mp3" style="display: none;" id="warning-tone">
+    </audio>
+</div>
+<div class="leave-msg-box" style="display: none;">
+    <div class="header grey12" style="background-color: rgb(244, 147, 0);">
+        <div class="corner-btn">
+            <span class="chat-close" isleavepage="true"></span>
+            <span class="chat-min"></span>
+        </div>
+    </div>
+    <div class="leave_body">
+        <p>
+            请留言，我们将尽快联系您!
+        </p>
+
+        <form name="leaveMsgForm">
+            <div class="row_item_input textbox">
+                <textarea class="grey" id="leavemsg_content" style="width:100%; height:140px;" name="leavemsg_content">请留言～</textarea>
+            </div>
+            <div class="row_item ptext">
+                <p>请务必留下您的联系方式，方便我们联系您！</p>
+            </div>
+            <div class="row_item_input" style="display: inline-block;margin-top:5px;margin-bottom:5px;">
+                <div class="input_icon"><img src="phone.png" width="25px" height="25px"></div>
+                <div class="inputbox phone">
+                    <input class="grey" id="leavemsg_phone" type="text" value="联系电话～" name="leavemsg_phone">
+                </div>
+            </div>
+            <div class="row_item_input" style="display: inline-block;">
+                <div class="input_icon"><img src="email.png" width="25px" height="25px"></div>
+                <div class="inputbox email">
+                    <input class="grey" id="leavemsg_email" type="text" value="邮箱～" name="leavemsg_email">
+                </div>
+            </div>
+            <div class="row_item_input">
+                <input type="button" value="留言" class="leave_btn" style="padding-top:0px;font-size:16px;">
+            </div>
+        </form>
+    </div>
+    <div class="leave_footer">
+        <div class="tips" style="display: none;">
+        </div>
+    </div>
+
+
+</div>
+<script type="text/javascript">
+    if(window.FormData){
+        $("#image-btn").show();
+    }
+
+    String.prototype.trim = function () {
+        var value = "";
+        return "undefined" == typeof this ? "" : (value = this.replace(/^\s*/g, ""), value.replace(/\s*$/g, ""));
+    };
+
+    function loadSocketJs(url, callback) {
+        var HEAD = document.getElementsByTagName("head").item(0) || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        script.onload = script.onreadystatechange = function () { //Attach handlers for all browsers
+            if (!/*@cc_on!@*/0 || this.readyState == "loaded" || this.readyState == "complete") {
+                this.onload = this.onreadystatechange = null;
+                this.parentNode.removeChild(this);
+                if (typeof(callback) == "function") callback();
+            }
+        };
+        script.setAttribute("src", url);
+        HEAD.appendChild(script);
+    }
+
+    function parseQuerystring() {
+        var href = window.location.href;
+        var queryStr = href.substr(href.indexOf("?") + 1);
+        if ("string" != typeof queryStr)return {};
+        var queryStr = queryStr.trim();
+        if ("" === queryStr)return {};
+
+        var json = {};
+        try {
+            for (var pairs = queryStr.split("&"), i = 0; i < pairs.length; i++) {
+                var kv = pairs[i].split("=");
+                kv[0] && kv[1] && (json[kv[0]] = decodeURIComponent(kv[1]))
+            }
+        } catch (e) {
+
+        }
+        return json;
+    }
+
+    function initChatStyle(styleColor, newwin) {
+        if (styleColor && styleColor != undefined && styleColor != "undefined") {
+            $(".header").css("background-color", "#" + styleColor);
+            $(".msg-toolbar-footer input").css("background-color", "#" + styleColor);
+            // $(".clearfix").css("background-color", "#" + styleColor);
+
+            $('head').append("<style>.judegCloseBtn,.customer,.submit_evaluate{background-color: #" + styleColor + ";}" +
+                    ".outer-right:before, .outer-right p{border-color:transparent transparent transparent #" + styleColor + " ;}" +
+                    "#show-more,.sendmsg,.close_box dd a:link,.close_box dd a:hover,.close_box dd a:active,.close_box dd a:visited,"+
+                    ".esc_talk dd a:link,.esc_talk dd a:hover,.esc_talk dd a:active,.esc_talk dd a:visited{color:#" + styleColor + "}" +
+                    ".judegClose,.isClose,#mtypelist li:hover{border-color:#" + styleColor + "} .manual,.question_groups li.active{color:#" + styleColor + "} .leave_btn,.reasons li.active{background-color:#" + styleColor + "} .input_icon{background-color:#" + styleColor + "}</style>");
+        }
+
+        if (serviceStates == 1) {
+            $(".chatcontainer").css("display", "block");
+            $(".leave-msg-box").css("display", "none");
+        } else {
+            $(".leave-msg-box").css("display", "block");
+            $(".chatcontainer").css("display", "none");
+        }
+        if (newwin) {
+            $("#chat-min").remove(), $("#chat-close").remove();
+            $("#chat-voice").remove();
+        }
+    }
+
+    var querys = parseQuerystring();
+    var accessId = querys.accessId;
+    var newwin = querys.newWin;
+    var serviceStates = querys.serviceStates;
+    var styleColor = querys.styleColor;
+    var fromUrl = querys.fromUrl;
+    var clientId = querys.clientId;
+    var otherParams = querys.otherParams;
+
+    var wapPage = false;
+    var version = querys.v;
+    var selectPeer = querys.peer;
+
+    var peers = undefined;
+    if(querys.peers){
+        peers = JSON.parse(querys.peers);
+    }
+    var msg_config = {
+        chatCK: "QIMO_CHAT_SID_",
+        proxyMsgUrl: "http://webchat.7moor.com",
+        accessId: accessId,
+        socketUrl: "http://webchat.7moor.com"
+    };
+
+    //样式初始化
+    initChatStyle(styleColor, newwin);
+
+    //解决加载完后才弹出点击咨询的按钮来
+    loadSocketJs(msg_config.proxyMsgUrl + "/javascripts/socket.io.js", function () {
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        script.onload = script.onreadystatechange = function () { //Attach handlers for all browsers
+            if (!/*@cc_on!@*/0 || this.readyState == "loaded" || this.readyState == "complete") {
+                this.onload = this.onreadystatechange = null;
+                this.parentNode.removeChild(this);
+                window.parent && window.parent.postMessage && (window.parent.postMessage("loadSocketJs", "*"));
+            }
+        };
+        script.setAttribute("src", msg_config.proxyMsgUrl + "/javascripts/7moorChat.js?v="+version);
+        document.body.appendChild(script);
+    });
+
+    //评价只能点击一次的事件
+//    $('.esc_form_easy label').click(function(){
+//        $('.esc_form_easy .esc_mask').show();
+//    })
+
+</script>
+
+
+
+</body></html>
