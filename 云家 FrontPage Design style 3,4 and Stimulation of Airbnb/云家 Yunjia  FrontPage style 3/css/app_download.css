@@ -55,7 +55,8 @@ img {
     display: block;
 }
 .banner {
-    background: url(../Images/mobile/banner_mobile2.jpg?v=20160314) no-repeat top center;
+    background: url(../images/app_banner.JPG);
+    background-size: 1522px 526px ;
     margin: 0 auto;
     height: 526px;
 }
