@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		
+		<title>智选云家</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/fwslider.css" media="all">
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+		<script src="js/fwslider.js"></script>
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+		<script src="js/jquery-ui.js"></script>
+		<script>
+			$(function() {
+				$("#datepicker,#datepicker1").datepicker();
+			});
+		</script>
+		<link type="text/css" rel="stylesheet" href="css/JFGrid.css" />
+		<link type="text/css" rel="stylesheet" href="css/JFFormStyle-1.css" />
+		<script type="text/javascript" src="js/JFCore.js"></script>
+		<script type="text/javascript" src="js/JFForms.js"></script>
+		<script type="text/javascript">
+			(function() {
+				JC.init({
+					domainKey: ''
+				});
+			})();
+		</script>
+		<!--nav-->
+		<script>
+			$(function() {
+				var pull = $('#pull');
+				menu = $('nav ul');
+				menuHeight = menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function() {
+					var w = $(window).width();
+					if (w > 320 && menu.is(':hidden')) {
+						menu.removeAttr('style');
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="header_bg">
+			<div class="logo" style="width: 400px;">
+				<a href="index.html"><img src="images/23141231.png" alt="" style="width: 80px;height: 80px;margin-top:15px;margin-left: 10%;">
+			</div>
+			<div class="wrap">
+
+				<div class="header">
+					<div class="h_right">
+						<ul class="menu">
+							<li class="active"><a href="index.html">首页</a></li> |
+							<li><a href="">特色房</a></li> |
+							<li><a href="">设施和服务</a></li> |
+							<li><a href="">社区</a></li> |
+							<li><a href="">预订信息</a></li>
+							<div class="clear"></div>
+						</ul>
+						<form class="style-1 drp_dwn">
+							<div class="row">
+								<div class="grid_3 columns">
+									<select class="custom-select" id="select-1">
+										<option selected="selected">用户登录</option>
+										<option>用户注册</option>
+									</select>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="clear"></div>
+					<div class="top-nav">
+						<nav class="clearfix">
+							<ul>
+								<li class="active"><a href="index.html">首页</a></li>
+								<li><a href="rooms.html">特色房</a></li>
+								<li><a href="reservation.html">设施和服务</a></li>
+								<li><a href="activities.html">社区</a></li>
+								<li><a href="contact.html">预订信息</a></li>
+							</ul>
+							<a href="#" id="pull">智选云家</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="images-slider">
+			<div id="fwslider">
+				<div class="slider_container">
+					<div class="slide">
+						<img src="images/backgroundMusic.jpg" alt="" />
+						<div class="slide_content">
+							<div class="slide_content_wrap">
+								<h4 class="title"><i class="bg"></i>坐拥长乐路 <span class="hide">聆听爱情故事的开始</span></h4>
+								<h5 class="title1" style="font-size: 15px;"><i class="bg"></i>从文人到政客，<span class="hide" >这些名字都曾经和这里有着渊源</span></h5>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<img src="images/Background.jpg" alt="" />
+						<div class="slide_content">
+							<div class="slide_content_wrap">
+								<h4 class="title"><i class="bg"></i>一丝禅意 一份乡愁 <span class="hide">他想让这个世界慢一点</span></h4>
+								<h5 class="title1" style="font-size: 15px;"><i class="bg"></i>把禅和佛学 <span class="hide">融入到客栈的每个角落</span> </h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="timers"> </div>
+				<div class="slidePrev"><span> </span></div>
+				<div class="slideNext"><span> </span></div>
+			</div>
+		</div>
+		<div class="main_bg">
+			<div class="wrap">
+				<div class="online_reservation">
+					<div class="b_room" style="width: 90%;">
+						<div class="booking_room">
+							<h4>线上预定</h4>
+							<p>向全国超过145个地区的当地人租住独一无二的家。</p>
+						</div>
+						<div class="reservation">
+							<ul>
+								<li class="span1_of_1">
+									<h5>房间类型</h5>
+									<div class="section_room">
+										<select id="country" onchange="change_country(this.value)" class="frm-field required">
+											<option value="null">房间类型</option>
+											<option value="null">1</option>
+											<option value="AX">2</option>
+											<option value="AX">3</option>
+										</select>
+									</div>
+								</li>
+								<li class="span1_of_1 left">
+									<h5>入住:</h5>
+									<div class="book_date">
+										<form>
+											<input class="date" id="datepicker" type="text" value="日/月/年" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'DD/MM/YY';}">
+										</form>
+
+									</div>
+								</li>
+								<li class="span1_of_1 left">
+									<h5>退房:</h5>
+									<div class="book_date">
+										<form>
+											<input class="date" id="datepicker1" type="text" value="日/月/年" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'DD/MM/YY';}">
+										</form>
+									</div>
+								</li>
+								<li class="span1_of_2 left">
+									<h5>人数:</h5>
+									<div class="section_room">
+										<select id="country" onchange="change_country(this.value)" class="frm-field required">
+											<option value="null">1</option>
+											<option value="null">2</option>
+											<option value="AX">3</option>
+											<option value="AX">4</option>
+										</select>
+									</div>
+								</li>
+								<li class="span1_of_3">
+									<div class="date_btn">
+										<form>
+											<input type="submit" value="现在预定" />
+										</form>
+									</div>
+								</li>
+								<div class="clear"></div>
+							</ul>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+
+				<div class="text">
+					<p style="font-family: '微软雅黑';font-size:30px;color:#1B242F;">遇见有趣的人，体验不一样的家</p>
+					<p style="font-family: '微软雅黑';font-size:20px;color:dimgrey;">属于我们的故事</p>
+				</div>
+				<div class="grids_of_3" style="padding-bottom: 0px;">
+					<div class="grid1_of_3">
+						<div class="grid1_of_3_img">
+							<a href="details.html">
+								<img src="images/x-mg1.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<h4><a href="#">最好的岁月从泸沽湖开始</a></h4>
+					</div>
+					<div class="grid1_of_3">
+						<div class="grid1_of_3_img">
+							<a href="details.html">
+								<img src="images/h-mg1 (1).jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<h4><a href="#">寒冬暖上心,美少女的聚会</a></h4>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="grids_of_3"  style="padding-bottom: 20px;">
+					<div class="grid1_of_3">
+						<div class="grid1_of_3_img">
+							<a href="details.html">
+								<img src="images/s-mg5.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<h4><a href="#">入冬后的三亚半夏</a></h4>
+					</div>
+					<div class="grid1_of_3">
+						<div class="grid1_of_3_img">
+							<a href="details.html">
+								<img src="images/s-mg1.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<h4><a href="#">麒麟公馆 住得洋气又舒服</a></h4>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="text">
+					<p style="font-family: '微软雅黑';font-size:30px;color:#1B242F;">别住酒店，住我家</p>
+					<p style="font-family: '微软雅黑';font-size:20px;color:dimgrey;">有朋自远方来，不亦乐乎</p>
+				</div>
+				<div class="grids_of_2"  style="padding-bottom: 0px;margin-bottom:0px;margin-top: 0px;">
+					<div class="grid1_of_2">
+						<div class="grid1_of_2_img">
+							<a href="details.html">
+								<img src="images/s-mg3.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<h4><a href="#">三亚 标间  <span> 255￥</span></a></h4>
+					</div>
+					<div class="grid1_of_2">
+						<div class="grid1_of_2_img">
+							<a href="details.html">
+								<img src="images/201601221458521191_369_232.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<h4><a href="#">北京 豪华双人间<span>180￥</span></a></h4>
+					</div>
+					<div class="grid1_of_2">
+						<div class="grid1_of_2_img">
+							<a href="details.html">
+								<img src="images/201511240008342337_369_232.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<h4><a href="#">云南 家庭间   <span>180￥</span></a></h4>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="grids_of_2"  style="padding-bottom: 0px;margin-top: 0px;">
+					<div class="grid1_of_2">
+						<div class="grid1_of_2_img">
+							<a href="details.html">
+								<img src="images/20160204135442900_369_232.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<h4><a href="#">上海 小隔间  <span>120￥</span></a></h4>
+					</div>
+					<div class="grid1_of_2">
+						<div class="grid1_of_2_img">
+							<a href="details.html">
+								<img src="images/201602251714044430.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<h4><a href="#">成都 整套别墅 <span>2140￥</span></a></h4>
+					</div>
+					<div class="grid1_of_2">
+						<div class="grid1_of_2_img">
+							<a href="details.html">
+								<img src="images/201602231122395933_369_232.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<h4><a href="#">大连 豪华商务间<span>550￥</span></a></h4>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="text">
+					<p style="font-family: '微软雅黑';font-size:30px;color:#1B242F;">有朋自远方来，不亦乐乎</p>
+				</div>
+				<div class="grids_of_3" style="padding-bottom: 0px;">
+					<div class="grid1_of_3" >
+						<div class="grid1_of_3_img">
+							<a href="details.html">
+								<img src="images/201603071354487279.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<p>如愿客栈去年开业，由学校的旧址改造而成，也是无锡唯一一家佛文化主题的民宿客栈。主人唐国新生长在马山，他和他的团队都是比较善于思考的一群人，从创意到建造，如愿客栈的定位就相当明确。唐国新本人是一名佛学爱好者，他觉得一个民宿的路走多远与民宿主人的爱好和修养是分不开的。他将自己喜欢的禅文化和佛学文化融入到客栈的每个角落。</p>
+					</div>
+					<div class="grid1_of_3">
+						<div class="grid1_of_3_img">
+							<a href="details.html">
+								<img src="images/201602221008232960.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<p>“里格半岛阳光“不仅仅是一间供旅人休息的客栈，也是我们用心经营的家。它充满了温暖和希冀，在泸沽湖的纯粹世界里留下些淡淡的印记。这里有我和他的故事，也有许多萍水相逢的故事，每一段旅程因相识而美好，因分离而悲伤，但是带着那些美好前往未来的日子一定会很精彩。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="grids_of_3" style="padding-bottom: 0px;">
+					<div class="grid1_of_3">
+						<div class="grid1_of_3_img">
+							<a href="details.html">
+								<img src="images/201602221008469579.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<p>曾经，有个管理咨询顾问，每年有超过150天都在做空中飞人。他睡遍各国酒店，却从来没有一家能走入他的心田。可是人生那么短，通往理想的路又那么长。于是，世界上少了一个浴血职场的上班族，多了一个守护自己Dream House的八零后房东。</p>
+					</div>
+					<div class="grid1_of_3">
+						<div class="grid1_of_3_img">
+							<a href="details.html">
+								<img src="images/201601051449224189.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<p>在上海著名的淮海中路上，有一座在张爱玲笔下屡屡被写到的国泰电影院，昔日的法租界就是围绕这座电影院而建。而就在法租界的心脏位置，80后美女设计师沈虹有一套“不同凡响”的老房子。一袭黑衣、俏丽的短发、纯真的笑容，如果只是初见，你可能想不到她已经是手握五间民宿的老板了。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="grids_of_3">
+					<div class="grid1_of_3">
+						<div class="grid1_of_3_img">
+							<a href="details.html">
+								<img src="images/201601051451012337.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<p>莲安，成都莲公馆的主人，在开民宿之前，做过金融做过贸易，也曾经在这个行业很有抱负。直到她遇到了Curt，生活轨迹便由此改变。Curt，标准的美国理工男，是一名化学工程师，常常在世界各地跑。旅行时，两人曾为那些美美的民宿而感到赞叹，如今，做一个让别人也赞叹的民宿则是他们的目标。</p>
+					</div>
+					<div class="grid1_of_3">
+						<div class="grid1_of_3_img">
+							<a href="details.html">
+								<img src="images/201603071354074738.jpg" alt="" />
+								<span class="next"> </span>
+							</a>
+						</div>
+						<p>北平花园不仅仅是一个简单的花园，还是一个繁花似锦的花园民宿。它被称为北京最漂亮的民宿之一，曾被《英国卫报》评选为全球最酷最时尚的的TOP10旅社之一。这里的主人是常被人叫做“花房姑娘”的睫毛，她生长在青海的大草原，喜欢种花种草，是一个爱穿棉麻花裙子的80后。她说，人生到现在，只羡慕两件事——别人的花园比她的大，花比她的多。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+			</div>
+		</div>
+		<div class="footer_bg">
+			<div class="wrap">
+				<div class="footer">
+					<div class="copy">
+						<p class="link"><span>Copyright &copy; 2016.智选云家  www.yunjia.com All rights reserved.</a></p>
+			</div>
+			<div class="f_nav">
+				<ul>
+					<li><a href="index.html">主页</a></li>
+					<li><a href="rooms.html">特色房</a></li>
+					<li><a href="reservation.html">设施和服务</a></li>
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>
+			</div>
+			<div class="soc_icons">
+				<ul>
+					<li><a class="icon3" href="#"></a></li>
+					<li><a class="icon5" href="#"></a></li>
+					<div class="clear"></div>
+				</ul>	
+			</div>
+			<div class="clear"></div>
+</div>
+</div>
+</div>		
+</body>
+</html>

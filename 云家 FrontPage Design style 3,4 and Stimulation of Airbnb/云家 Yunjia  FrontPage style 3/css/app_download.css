@@ -1,0 +1,177 @@
+.head-box {
+    margin: 0 auto;
+    width: 1190px;
+    padding: 10px 0;
+    overflow: hidden;
+}
+.head-box .site-logo-cont {
+    float: left;
+    width: 310px;
+}
+.head-box .site-logo-cont .site-logo,
+.head-box .site-logo-cont .logo-text {
+    display: block;
+    float: left;
+    height: 35px;
+    overflow: hidden;
+    text-indent: -30000px;
+    background-image: url(../Images/logo-new.png);
+    background-repeat: no-repeat
+}
+.head-box .site-logo-cont .site-logo {
+    width: 146px;
+    background-position: 0 0;
+}
+.head-box .site-logo-cont .logo-text {
+    width: 130px;
+    margin-left: 10px;
+    background-position: -156px 0;
+}
+.head-box .service-hotline {
+    float: right;
+    font-size: 14px;
+}
+.head-box .service-hotline .h-text {
+    display: block;
+    color: #F60;
+    font-family: Tahoma;
+}
+
+/*æ–°æ·»åŠ */
+
+.clearfix {
+    *zoom: 1
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    height: 0;
+    line-height: 0;
+    clear: both
+}
+img {
+    vertical-align: middle;
+    _vertical-align: middle;
+    display: block;
+}
+.banner {
+    background: url(../Images/mobile/banner_mobile2.jpg?v=20160314) no-repeat top center;
+    margin: 0 auto;
+    height: 526px;
+}
+.wrapper {
+    width: 950px;
+    margin: 0 auto;
+    position: relative;
+}
+.btn {
+    width: 328px;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 342px;
+}
+.btn li {
+    width: 152px;
+    float: left;
+    margin-right: 12px;
+}
+.btn img {
+    width: 152px;
+    height: 46px;
+}
+.scroll {
+    width: 190px;
+    float: left;
+    overflow: hidden;
+    position: absolute;
+    left: 24px;
+    top: 118px;
+}
+.scroll ul {
+    width: 1900px;
+    position: relative;
+}
+.scroll li {
+    float: left;
+    width: 190px;
+    height: 338px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    position: relative;
+}
+.scroll li img {
+    width: 190px;
+    height: 338px;
+}
+.list {
+    width: 940px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+.list ul li {
+    width: 168px;
+    background: url(../Images/mobile/line_bg_06.png) no-repeat right center;
+    float: left;
+    _display: inline;
+    margin-right: 20px;
+    text-align: center;
+}
+.list ul .last_li {
+    background: none;
+}
+.list ul li img {
+    display:inline-block;
+    width: 91px;
+    height: 91px;
+    margin-bottom: 10px;
+    
+}
+.p1 {
+    font-size: 18px;
+    color: #333333;
+    line-height: 26px;
+}
+.p2 {
+    font-size: 12px;
+    color: #999999;
+    line-height: 24px;
+}
+.iPhoneDownload {
+    width: 372px;
+    height: 338px;
+    background: url(../Images/mobile/iPhoneDownload.png) no-repeat top center;
+    display: none;
+}
+.download {
+    float: left;
+    width: 180px;
+    height: 166px;
+    margin-top: 34px;
+    text-align: center;
+    border-right: 1px solid #e8e8e8;
+}
+.download h2 {
+    font-size: 14px;
+    color: #333;
+}
+.download h2 span {
+    color: #f60;
+}
+.download a {
+    display: inline-block;
+    margin: 58px auto 0;
+}
+.barcodeIphone {
+    border-right: none;
+}
+.barcodeIphone img {
+    display: inline-block;
+    margin: 16px auto 0;
+}
+.AndroidDownload {
+    background: url(../Images/mobile/AndroidDownload.png) no-repeat top center;
+}

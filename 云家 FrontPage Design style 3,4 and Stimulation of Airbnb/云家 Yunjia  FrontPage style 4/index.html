@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Aviators - byaviators.com">
+		<link href='http://fonts.useso.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="assets/img/23141231.png" type="image/png">
+		<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/bootstrap-responsive.css" type="text/css">
+		<link rel="stylesheet" href="assets/libraries/chosen/chosen.css" type="text/css">
+		<link rel="stylesheet" href="assets/libraries/bootstrap-fileupload/bootstrap-fileupload.css" type="text/css">
+		<link rel="stylesheet" href="assets/libraries/jquery-ui-1.10.2.custom/css/ui-lightness/jquery-ui-1.10.2.custom.min.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/yunjia-style.css" type="text/css" id="color-variant-default">
+		<link rel="stylesheet" href="#" type="text/css" id="color-variant">
+		<link rel="shortcut icon" href="assets/img/23141231(1).ico">
+		<title>智选云家</title>
+	</head>
+
+	<body>
+		<div id="wrapper-outer">
+			<div id="wrapper">
+				<div id="wrapper-inner">
+					<!-- BREADCRUMB -->
+					<div class="breadcrumb-wrapper">
+						<div class="container">
+							<div class="row">
+								<div class="span12">
+									<ul class="breadcrumb pull-left">
+										<li><a href="index.html">主页</a></li>
+									</ul>
+									<!-- /.breadcrumb -->
+
+									<div class="account pull-right">
+										<ul class="nav nav-pills">
+											<li><a href="login.html">登陆</a></li>
+											<li><a href="registration.html">注册</a></li>
+										</ul>
+									</div>
+								</div>
+								<!-- /.span12 -->
+							</div>
+							<!-- /.row -->
+						</div>
+						<!-- /.container -->
+					</div>
+					<!-- /.breadcrumb-wrapper -->
+
+					<!-- HEADER -->
+					<div id="header-wrapper">
+						<div id="header">
+							<div id="header-inner">
+								<div class="container">
+									<div class="navbar">
+										<div class="navbar-inner">
+											<div class="row">
+												<div class="logo-wrapper span4">
+													<a href="#nav" class="hidden-desktop" id="btn-nav">导航栏</a>
+
+													<div class="logo">
+														<a href="index.html" title="Home">
+															<img src="assets/img/23141231.png" alt="Home" style="width: 80px;height: 80px;">
+														</a>
+													</div>
+													<!-- /.logo -->
+
+													<div class="site-name">
+														<a href="/" title="Home" class="brand">YunJia</a>
+													</div>
+													<!-- /.site-name -->
+
+													<div class="site-slogan">
+														<span>智选云家  欢迎回家</span>
+													</div>
+													<!-- /.site-slogan -->
+												</div>
+												<!-- /.logo-wrapper -->
+
+												<a class="btn btn-primary btn-large list-your-property arrow-right" href="">发布房源</a>
+											</div>
+											<!-- /.row -->
+										</div>
+										<!-- /.navbar-inner -->
+									</div>
+									<!-- /.navbar -->
+								</div>
+								<!-- /.container -->
+							</div>
+							<!-- /#header-inner -->
+						</div>
+						<!-- /#header -->
+					</div>
+
+					<!-- NAVIGATION -->
+					<div id="navigation">
+						<div class="container">
+							<div class="navigation-wrapper">
+								<div class="navigation clearfix-normal">
+
+									<ul class="nav">
+										<li class="menuparent">
+											<span class="menuparent nolink">主页</span>
+											<ul>
+												<li><a href="index-slider.html">特色房</a></li>
+												<li><a href="index.html">设施和服务</a></li>
+												<li><a href="index-simple.html">预订信息</a></li>
+												<li><a href="index-carousel.html">社区</a></li>
+											</ul>
+										</li>
+										<li><a href="contact-us.html">联系我们</a></li>
+									</ul>
+									<form method="get" class="site-search" action="?">
+										<div class="input-append">
+											<input title="Enter the terms you wish to search for." class="search-query span2 form-text" placeholder="搜房源" type="text" name="">
+											<button type="submit" class="btn"><i class="icon-search"></i></button>
+										</div>
+										<!-- /.input-append -->
+									</form>
+									<!-- /.site-search -->
+								</div>
+								<!-- /.navigation -->
+							</div>
+							<!-- /.navigation-wrapper -->
+						</div>
+						<!-- /.container -->
+					</div>
+					<!-- /.navigation -->
+
+					<!-- CONTENT -->
+					<div id="content">
+						<div class="map-wrapper">
+							<div class="map">
+								<div id="map" class="map-inner"></div>
+								<!-- /.map-inner -->
+
+								<div class="container">
+									<div class="row">
+										<div class="span3">
+											<div class="property-filter pull-right">
+												<div class="content">
+													<form method="get" action="?">
+														<div class="location control-group">
+															<label class="control-label" for="inputLocation">
+																地点
+															</label>
+															<div class="controls">
+																<select id="inputLocation">
+																	<option id="malibu">朝阳区，北京市</option>
+																	<option id="palo-alto">浦东，上海市</option>
+																</select>
+															</div>
+															<!-- /.controls -->
+														</div>
+														<!-- /.control-group -->
+
+														<div class="type control-group">
+															<label class="control-label" for="inputType">
+																类型
+															</label>
+															<div class="controls">
+																<select id="inputType">
+																	<option id="apartment">公寓</option>
+																	<option id="condo">别墅</option>
+																</select>
+															</div>
+															<!-- /.controls -->
+														</div>
+														<!-- /.control-group -->
+
+														<div class="beds control-group">
+															<label class="control-label" for="inputBeds">
+																床位
+															</label>
+															<div class="controls">
+																<select id="inputBeds">
+																	<option id="11">1</option>
+																	<option id="21">2</option>
+																</select>
+															</div>
+															<!-- /.controls -->
+														</div>
+														<!-- /.control-group -->
+
+														<div class="baths control-group">
+															<label class="control-label" for="inputBaths">
+																房间数量
+															</label>
+															<div class="controls">
+																<select id="inputBaths">
+																	<option id="1">1</option>
+																	<option id="2">2</option>
+																</select>
+															</div>
+															<!-- /.controls -->
+														</div>
+
+														<div class="form-actions">
+															<input type="submit" value="搜索房源" class="btn btn-primary btn-large">
+														</div>
+														<!-- /.form-actions -->
+													</form>
+												</div>
+												<!-- /.content -->
+											</div>
+											<!-- /.property-filter -->
+										</div>
+										<!-- /.span3 -->
+									</div>
+									<!-- /.row -->
+								</div>
+								<!-- /.container -->
+							</div>
+							<!-- /.map -->
+						</div>
+						<!-- /.map-wrapper -->
+						<div class="container">
+							<div id="main">
+								<div class="row">
+									<div class="span9">
+										<h1 class="page-header" style="font-family: '微软雅黑';text-align: center;">周末好去处</h1>
+										<div class="properties-grid">
+											<div class="row">
+												
+												<div class="property span3">
+													
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201601051449224189.jpg" alt="">
+														</div>
+														<!-- /.content -->
+
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													<div class="title">
+														<h2><a href="detail.html">景美人更美 去野一把</a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													<!-- /.bathrooms -->
+												</div>
+												<!-- /.property -->
+
+												<div class="property span3">
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201601051451012337.jpg" alt="">
+														</div>
+														<!-- /.content -->
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													<div class="title">
+														<h2><a href="detail.html">隐居京郊 静享时光</a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													<!-- /.bathrooms -->
+												</div>
+												<!-- /.property -->
+
+												<div class="property span3">
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201602221008232960.jpg" alt="">
+														</div>
+														<!-- /.content -->
+
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													<div class="title">
+														<h2><a href="detail.html">麒麟公馆 洋气又舒服</a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													<!-- /.bathrooms -->
+												</div>
+												<!-- /.property -->
+
+												<div class="property span3">
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201602221008469579.jpg" alt="">
+														</div>
+														<!-- /.content -->
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													<div class="title">
+														<h2><a href="detail.html">入冬后的三亚半夏</a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													<!-- /.bathrooms -->
+												</div>
+												<!-- /.property -->
+
+												<div class="property span3">
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201603071354487279.jpg" alt="">
+														</div>
+														<!-- /.content -->
+
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													<div class="title">
+														<h2><a href="detail.html">寻找深圳的秋冬</a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													<!-- /.bathrooms -->
+												</div>
+												<!-- /.property -->
+
+												<div class="property span3">
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201603071354074738 (1).jpg" alt="">
+														</div>
+														<!-- /.content -->
+
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													<div class="title">
+														<h2><a href="detail.html">在金山岭下的民俗小院</a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													
+													<!-- /.bathrooms -->
+												</div>
+												<!-- /.property -->
+											</div>
+											<!-- /.row -->
+										</div>
+										<!-- /.properties-grid -->
+									</div>
+									<div class="sidebar span3">
+										<div class="widget our-agents">
+											<div class="title">
+												<h2>联系业主</h2>
+											</div>
+											<!-- /.title -->
+
+											<div class="content">
+												<div class="agent">
+													<div class="image">
+														<img src="assets/img/touxiang1.jpg" alt="">
+													</div>
+													<!-- /.image -->
+													<div class="name">Victoria 苏</div>
+													<!-- /.name -->
+													<div class="phone">333-666-777</div>
+													<!-- /.phone -->
+													<div class="email"><a href="mailto:victoria@example.com">su@hotmail.com</a></div>
+													<!-- /.email -->
+												</div>
+												<!-- /.agent -->
+
+												<div class="agent">
+													<div class="image">
+														<img src="assets/img/touxiang3.jpg" alt="">
+													</div>
+													<!-- /.image -->
+													<div class="name">楚凡凡要飞飞飞</div>
+													<!-- /.name -->
+													<div class="phone">111-222-333</div>
+													<!-- /.phone -->
+													<div class="email"><a href="mailto:john.doe@example.com">fanfan@gmail.com</a></div>
+													<!-- /.email -->
+												</div>
+												<!-- /.agent -->
+											</div>
+											<!-- /.content -->
+										</div>
+										<!-- /.our-agents -->
+										<div class="hidden-tablet">
+											<div class="widget properties last">
+												<div class="title">
+													<h2>最新房源</h2>
+												</div>
+												<!-- /.title -->
+
+												<div class="content">
+													<div class="property">
+														<div class="image">
+															<a href="detail.html"></a>
+															<img src="assets/img/nh-mg2.jpg" alt="">
+														</div>
+														<!-- /.image -->
+
+														<div class="wrapper">
+															<div class="title">
+																<h3>
+                        <a href="detail.html">悦泰街里高级市景单卧套房</a>
+                    </h3>
+															</div>
+															<!-- /.title -->
+															<div class="location">大连</div>
+															<!-- /.location -->
+															<div class="price">300￥</div>
+															<!-- /.price -->
+														</div>
+														<!-- /.wrapper -->
+													</div>
+													<!-- /.property -->
+
+													<div class="property">
+														<div class="image">
+															<a href="detail.html"></a>
+															<img src="assets/img/s-mg3.jpg" alt="">
+														</div>
+														<!-- /.image -->
+
+														<div class="wrapper">
+															<div class="title">
+																<h3>
+                        <a href="detail.html">悦泰街里豪华市景大床房</a>
+                    </h3>
+															</div>
+															<!-- /.title -->
+															<div class="location">大连</div>
+															<!-- /.location -->
+															<div class="price">300￥</div>
+															<!-- /.price -->
+														</div>
+														<!-- /.wrapper -->
+													</div>
+													<!-- /.property -->
+
+													<div class="property">
+														<div class="image">
+															<a href="detail.html"></a>
+															<img src="assets/img/s-mg5.jpg" alt="">
+														</div>
+														<!-- /.image -->
+
+														<div class="wrapper">
+															<div class="title">
+																<h3>
+                        <a href="detail.html">悦泰街里豪华市景双床房</a>
+                    </h3>
+															</div>
+															<!-- /.title -->
+															<div class="location">大连</div>
+															<!-- /.location -->
+															<div class="price">300￥</div>
+															<!-- /.price -->
+														</div>
+														<!-- /.wrapper -->
+													</div>
+													<!-- /.property -->
+
+													<div class="property">
+														<div class="image">
+															<a href="detail.html"></a>
+															<img src="assets/img/s-mg3.jpg" alt="">
+														</div>
+														<!-- /.image -->
+
+														<div class="wrapper">
+															<div class="title">
+																<h3>
+                        <a href="detail.html">悦泰街里高级市景双床房</a>
+                    </h3>
+															</div>
+															<!-- /.title -->
+															<div class="location">大连</div>
+															<!-- /.location -->
+															<div class="price">300￥</div>
+															<!-- /.price -->
+														</div>
+														<!-- /.wrapper -->
+													</div>
+													<!-- /.property -->
+												</div>
+												<!-- /.content -->
+											</div>
+											<!-- /.properties -->
+										</div>
+									</div>
+									<div class="span9">
+										<h1 class="page-header" style="font-family: '微软雅黑'; text-align: center;">家在四方</h1>
+										<div class="properties-grid">
+											<div class="row">
+												<div class="property span3">
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201601051449224189.jpg" alt="">
+														</div>
+														<!-- /.content -->
+
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													<div class="title">
+														<h2><a href="detail.html">景美人更美 去野一把</a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													<!-- /.bathrooms -->
+												</div>
+												<!-- /.property -->
+
+												<div class="property span3">
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201601051451012337.jpg" alt="">
+														</div>
+														<!-- /.content -->
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													<div class="title">
+														<h2><a href="detail.html">隐居京郊 静享时光</a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													<!-- /.bathrooms -->
+												</div>
+												<div class="property span3">
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201601051451012337.jpg" alt="">
+														</div>
+														<!-- /.content -->
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													
+
+													<div class="title">
+														<h2><a href="detail.html">麒麟公馆 洋气又舒服</a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													<!-- /.bathrooms -->
+												</div>
+												<!-- /.property -->
+
+												<div class="property span3">
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201602221008469579.jpg" alt="">
+														</div>
+														<!-- /.content -->
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													<div class="title">
+														<h2><a href="detail.html">入冬后的三亚半夏 </a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													<!-- /.bathrooms -->
+												</div>
+												<!-- /.property -->
+
+												<div class="property span3">
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201603071354487279.jpg" alt="">
+														</div>
+														<!-- /.content -->
+
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													<div class="title">
+														<h2><a href="detail.html">寻找深圳的秋冬</a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													<!-- /.bathrooms -->
+												</div>
+												<!-- /.property -->
+
+												<div class="property span3">
+													<div class="image">
+														<div class="content">
+															<a href="detail.html"></a>
+															<img src="assets/img/201603071354074738 (1).jpg" alt="">
+														</div>
+														<!-- /.content -->
+
+														<div class="price">200￥</div>
+														<!-- /.price -->
+														<div class="reduced">预订 </div>
+														<!-- /.reduced -->
+													</div>
+													<!-- /.image -->
+
+													<div class="title">
+														<h2><a href="detail.html">在金山岭下的民俗小院</a></h2>
+													</div>
+													<!-- /.title -->
+
+													<div class="location">大连</div>
+													<!-- /.location -->
+													<div class="area">
+														<span class="key">面积</span>
+														<!-- /.key -->
+														<span class="value">120</span>
+														<!-- /.value -->
+													</div>
+													<!-- /.area -->
+													<div class="bedrooms">
+														<div class="content">4</div>
+													</div>
+													<!-- /.bedrooms -->
+													<div class="bathrooms">
+														<div class="content">3</div>
+													</div>
+													<!-- /.bathrooms -->
+												</div>
+												<!-- /.property -->
+											</div>
+											<!-- /.row -->
+										</div>
+										<!-- /.properties-grid -->
+									</div>
+									
+								</div>
+								<div class="carousel">
+									<h2 class="page-header" style="font-family: '微软雅黑';text-align: center;">遇见有趣的人，体验不一样的家</h2>
+
+									<div class="content">
+										<a class="carousel-prev" href="detail.html">Previous</a>
+										<a class="carousel-next" href="detail.html">Next</a>
+										<ul>
+											<li>
+												<div class="image">
+													<a href="detail.html"></a>
+													<img src="assets/img/201602251714044430.jpg" alt="">
+												</div>
+												<!-- /.image -->
+												<div class="title">
+													<h3><a href="detail.html">身在四海，如在家</a></h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location-->
+												<div class="price">300￥</div>
+												<!-- .price -->
+												<div class="area">
+													<span class="key">面积</span>
+													<span class="value">750m<sup>2</sup></span>
+												</div>
+												<!-- /.area -->
+												<div class="bathrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bathrooms -->
+												<div class="bedrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bedrooms -->
+											</li>
+											<li>
+												<div class="image">
+													<a href="detail.html"></a>
+													<img src="assets/img/201511240002371506_369_232.jpg" alt="">
+												</div>
+												<!-- /.image -->
+												<div class="title">
+													<h3><a href="detail.html">身在四海，如在家</a></h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location-->
+												<div class="price">300￥</div>
+												<!-- .price -->
+												<div class="area">
+													<span class="key">面积</span>
+													<span class="value">750m<sup>2</sup></span>
+												</div>
+												<!-- /.area -->
+												<div class="bathrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bathrooms -->
+												<div class="bedrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bedrooms -->
+											</li>
+
+											<li>
+												<div class="image">
+													<a href="detail.html"></a>
+													<img src="assets/img/201511232357095244_369_232.jpg" alt="">
+												</div>
+												<!-- /.image -->
+												<div class="title">
+													<h3><a href="detail.html">身在四海，如在家</a></h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location-->
+												<div class="price">300￥</div>
+												<!-- .price -->
+												<div class="area">
+													<span class="key">面积</span>
+													<span class="value">750m<sup>2</sup></span>
+												</div>
+												<!-- /.area -->
+												<div class="bathrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bathrooms -->
+												<div class="bedrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bedrooms -->
+											</li>
+
+											<li>
+												<div class="image">
+													<a href="detail.html"></a>
+													<img src="assets/img/20151126100155867_369_232.jpg" alt="">
+												</div>
+												<!-- /.image -->
+												<div class="title">
+													<h3><a href="detail.html">身在四海，如在家</a></h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location-->
+												<div class="price">300￥</div>
+												<!-- .price -->
+												<div class="area">
+													<span class="key">面积</span>
+													<span class="value">750m<sup>2</sup></span>
+												</div>
+												<!-- /.area -->
+												<div class="bathrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bathrooms -->
+												<div class="bedrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bedrooms -->
+											</li>
+
+											<li>
+												<div class="image">
+													<a href="detail.html"></a>
+													<img src="assets/img/201512241514382071_369_232.jpg" alt="">
+												</div>
+												<!-- /.image -->
+												<div class="title">
+													<h3><a href="detail.html">身在四海，如在家</a></h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location-->
+												<div class="price">300￥</div>
+												<!-- .price -->
+												<div class="area">
+													<span class="key">面积</span>
+													<span class="value">750m<sup>2</sup></span>
+												</div>
+												<!-- /.area -->
+												<div class="bathrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bathrooms -->
+												<div class="bedrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bedrooms -->
+											</li>
+
+											<li>
+												<div class="image">
+													<a href="detail.html"></a>
+													<img src="assets/img/201603041634231257.jpg" alt="">
+												</div>
+												<!-- /.image -->
+												<div class="title">
+													<h3><a href="detail.html">身在四海，如在家</a></h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location-->
+												<div class="price">300￥</div>
+												<!-- .price -->
+												<div class="area">
+													<span class="key">面积</span>
+													<span class="value">750m<sup>2</sup></span>
+												</div>
+												<!-- /.area -->
+												<div class="bathrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bathrooms -->
+												<div class="bedrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bedrooms -->
+											</li>
+
+											<li>
+												<div class="image">
+													<a href="detail.html"></a>
+													<img src="assets/img/201603111546325684.jpg" alt="">
+												</div>
+												<!-- /.image -->
+												<div class="title">
+													<h3><a href="detail.html">身在四海，如在家</a></h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location-->
+												<div class="price">300￥</div>
+												<!-- .price -->
+												<div class="area">
+													<span class="key">面积</span>
+													<span class="value">750m<sup>2</sup></span>
+												</div>
+												<!-- /.area -->
+												<div class="bathrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bathrooms -->
+												<div class="bedrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bedrooms -->
+											</li>
+
+											<li>
+												<div class="image">
+													<a href="detail.html"></a>
+													<img src="assets/img/20151208163900717_369_232.jpg" alt="">
+												</div>
+												<!-- /.image -->
+												<div class="title">
+													<h3><a href="detail.html">身在四海，如在家</a></h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location-->
+												<div class="price">300￥</div>
+												<!-- .price -->
+												<div class="area">
+													<span class="key">面积</span>
+													<span class="value">750m<sup>2</sup></span>
+												</div>
+												<!-- /.area -->
+												<div class="bathrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bathrooms -->
+												<div class="bedrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bedrooms -->
+											</li>
+
+											<li>
+												<div class="image">
+													<a href="detail.html"></a>
+													<img src="assets/img/20160307152044286_369_232.jpg" alt="">
+												</div>
+												<!-- /.image -->
+												<div class="title">
+													<h3><a href="detail.html">身在四海，如在家</a></h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location-->
+												<div class="price">300￥</div>
+												<!-- .price -->
+												<div class="area">
+													<span class="key">面积</span>
+													<span class="value">750m<sup>2</sup></span>
+												</div>
+												<!-- /.area -->
+												<div class="bathrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bathrooms -->
+												<div class="bedrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bedrooms -->
+											</li>
+
+											<li>
+												<div class="image">
+													<a href="detail.html"></a>
+													<img src="assets/img/201601221458521191_369_232.jpg" alt="">
+												</div>
+												<!-- /.image -->
+												<div class="title">
+													<h3><a href="detail.html">身在四海，如在家</a></h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<div class="price">300￥</div>
+												<!-- .price -->
+												<div class="area">
+													<span class="key">面积</span>
+													<span class="value">750m<sup>2</sup></span>
+												</div>
+												<!-- /.area -->
+												<div class="bathrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bathrooms -->
+												<div class="bedrooms">
+													<div class="inner">3</div>
+												</div>
+												<!-- /.bedrooms -->
+											</li>
+										</ul>
+									</div>
+									<!-- /.content -->
+								</div>
+								<!-- /.carousel -->
+
+							</div>
+						</div>
+
+						<!-- /.bottom-wrapper -->
+					</div>
+					<!-- /#content -->
+				</div>
+				<!-- /#wrapper-inner -->
+
+				<div id="footer-wrapper">
+					<div id="footer-top">
+						<div id="footer-top-inner" class="container">
+							<div class="row">
+								<div class="widget properties span3">
+									<div class="title">
+										<h2>最新房源</h2>
+									</div>
+									<!-- /.title -->
+
+									<div class="content">
+										<div class="property">
+											<div class="image">
+												<a href="detail.html"></a>
+												<img src="assets/img/201511240002371506_369_232.jpg" alt="">
+											</div>
+											<!-- /.image -->
+											<div class="wrapper">
+												<div class="title">
+													<h3>
+                                        <a href="detail.html">身在四海，如在家</a>
+                                    </h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location -->
+												<div class="price">300￥</div>
+												<!-- /.price -->
+											</div>
+											<!-- /.wrapper -->
+										</div>
+										<!-- /.property -->
+
+										<div class="property">
+											<div class="image">
+												<a href="detail.html"></a>
+												<img src="assets/img/201511240008342337_369_232.jpg" alt="">
+											</div>
+											<!-- /.image -->
+											<div class="wrapper">
+												<div class="title">
+													<h3>
+                                        <a href="detail.html">身在四海，如在家</a>
+                                    </h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location -->
+												<div class="price">300￥</div>
+												<!-- /.price -->
+											</div>
+											<!-- /.wrapper -->
+										</div>
+										<!-- /.property -->
+
+										<div class="property">
+											<div class="image">
+												<a href="detail.html"></a>
+												<img src="assets/img/201511240004171648_369_232.jpg" alt="">
+											</div>
+											<!-- /.image -->
+											<div class="wrapper">
+												<div class="title">
+													<h3>
+                                        <a href="detail.html">身在四海，如在家</a>
+                                    </h3>
+												</div>
+												<!-- /.title -->
+												<div class="location">大连</div>
+												<!-- /.location -->
+												<div class="price">300￥</div>
+												<!-- /.price -->
+											</div>
+											<!-- /.wrapper -->
+										</div>
+										<!-- /.property -->
+									</div>
+									<!-- /.content -->
+								</div>
+								<!-- /.properties-small -->
+
+								<div class="widget span3">
+									<div class="title">
+										<h2>联系我们</h2>
+									</div>
+									<!-- /.title -->
+
+									<div class="content">
+										<table class="contact">
+											<tbody>
+												<tr>
+													<th class="address">地址:</th>
+
+													</td>
+												</tr>
+												<tr>
+													<th class="phone">电话:</th>
+													<td>1234567890</td>
+												</tr>
+												<tr>
+													<th class="email">E-mail:</th>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- /.content -->
+								</div>
+								<!-- /.widget -->
+
+								<div class="widget span3">
+									<div class="title">
+										<h2 class="block-title">链接</h2>
+									</div>
+									<!-- /.title -->
+
+									<div class="content">
+										<ul class="menu nav">
+											<li class="first leaf"><a href="404.html">我是房客</a></li>
+											<li class="leaf"><a href="about-us.html">帮助QA</a></li>
+											<li class="leaf"><a href="contact-us.html">房型介绍</a></li>
+											<li class="leaf"><a href="faq.html">FAQ</a></li>
+											<li class="leaf"><a href="grid-system.html">邀请好友返利</a></li>
+											<li class="leaf"><a href="our-agents.html">联系我们</a></li>
+										</ul>
+									</div>
+									<!-- /.content -->
+								</div>
+								<!-- /.widget -->
+
+								<div class="widget span3">
+									<div class="title">
+										<h2 class="block-title">建议和反馈</h2>
+									</div>
+									<!-- /.title -->
+
+									<div class="content">
+										<form method="post">
+											<div class="control-group">
+												<label class="control-label" for="inputName">
+													姓名
+													<span class="form-required" title="This field is required.">*</span>
+												</label>
+												<div class="controls">
+													<input type="text" id="inputName">
+												</div>
+												<!-- /.controls -->
+											</div>
+											<!-- /.control-group -->
+
+											<div class="control-group">
+												<label class="control-label" for="inputEmail">
+													邮箱
+													<span class="form-required" title="This field is required.">*</span>
+												</label>
+												<div class="controls">
+													<input type="text" id="inputEmail">
+												</div>
+												<!-- /.controls -->
+											</div>
+											<!-- /.control-group -->
+
+											<div class="control-group">
+												<label class="control-label" for="inputMessage">
+													留言
+													<span class="form-required" title="This field is required.">*</span>
+												</label>
+
+												<div class="controls">
+													<textarea id="inputMessage"></textarea>
+												</div>
+												<!-- /.controls -->
+											</div>
+											<!-- /.control-group -->
+
+											<div class="form-actions">
+												<input type="submit" class="btn btn-primary arrow-right" value="发送">
+											</div>
+											<!-- /.form-actions -->
+										</form>
+									</div>
+									<!-- /.content -->
+								</div>
+								<!-- /.widget -->
+							</div>
+							<!-- /.row -->
+						</div>
+						<!-- /#footer-top-inner -->
+					</div>
+					<!-- /#footer-top -->
+
+					<!-- /#footer -->
+				</div>
+				<!-- /#footer-wrapper -->
+			</div>
+			<!-- /#wrapper -->
+		</div>
+		<!-- /#wrapper-outer -->
+
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.ezmark.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.currency.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="assets/js/retina.js"></script>
+		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/carousel.js"></script>
+		<script type="text/javascript" src="assets/js/gmap3.min.js"></script>
+		<script type="text/javascript" src="assets/js/gmap3.infobox.min.js"></script>
+		<script type="text/javascript" src="assets/libraries/jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.min.js"></script>
+		<script type="text/javascript" src="assets/libraries/chosen/chosen.jquery.min.js"></script>
+		<script type="text/javascript" src="assets/libraries/iosslider/_src/jquery.iosslider.min.js"></script>
+		<script type="text/javascript" src="assets/libraries/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+		<script type="text/javascript" src="assets/js/realia.js"></script>
+	</body>
+
+</html>
